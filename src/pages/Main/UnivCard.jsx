@@ -7,7 +7,15 @@ const UnivCard = () => {
       <UnivCircle />
       <UnivSquare>
         <UnivName>멋사대학교</UnivName>
-        <UnivScore>171 / 200</UnivScore>
+        <TeamName>팀이름팀이름팀이름팀이름</TeamName>
+        <UnivScore>
+          <span className="ourTeam">171</span>
+          <span className="total">/ 200</span>
+          <span className="scoreText">점</span>
+        </UnivScore>
+        <Rank>
+          멋사대학교에서<span className="rankNum">5</span>위
+        </Rank>
         <MainButton>더보기</MainButton>
       </UnivSquare>
     </UnivCardWrapper>
@@ -55,9 +63,43 @@ const UnivName = styled.div`
   margin-top: 36px;
 `;
 
+const TeamName = styled.div`
+  ${(props) => props.theme.fontStyles.subHead3Med};
+  color: ${(props) => props.theme.colors.gray70};
+  margin-top: 8px;
+`;
+
 const UnivScore = styled.div`
-  ${(props) => props.theme.fontStyles.headline1};
-  color: ${(props) => props.theme.colors.blue};
-  margin-top: 66px;
-  margin-bottom: 72px;
+  display: flex;
+  align-items: center;
+  width: 234px;
+  height: 72px;
+  margin-top: 36px;
+  .ourTeam {
+    ${(props) => props.theme.fontStyles.headline1};
+    color: ${(props) => props.theme.colors.blue};
+    margin-right: 12px;
+  }
+  .total {
+    ${(props) => props.theme.fontStyles.headline2};
+    color: #67a5ff;
+    margin-right: 4px;
+  }
+  .scoreText {
+    ${(props) => props.theme.fontStyles.headline3};
+    color: #67a5ff;
+  }
+`;
+
+const Rank = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+  ${(props) => props.theme.fontStyles.subHead3Med};
+  color: ${(props) => props.theme.colors.gray70};
+  span {
+    margin-left: 4px;
+    ${(props) => props.theme.fontStyles.subHead3Bold};
+    color: ${(props) => props.theme.colors.blue};
+  }
 `;
