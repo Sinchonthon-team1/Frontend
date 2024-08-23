@@ -81,6 +81,7 @@ const MoreBtn = styled.div`
   &:hover {
     background: rgba(255, 16, 140, 0.25);
   }
+  cursor: pointer;
 `;
 
 const Puzzle = styled.div`
