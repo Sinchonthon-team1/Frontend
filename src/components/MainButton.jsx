@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainButton = (handleButton, children) => {
+const MainButton = ({ handleButton, children }) => {
   return (
     <div>
       <Button onClick={handleButton}>{children}</Button>
