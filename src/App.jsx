@@ -8,6 +8,8 @@ import Performance from "./pages/Performance";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import GameResult from "./pages/GameResult";
+import GameCollection from "./pages/GameCollection";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route path="/gameregister" element={<GameRegister />} />
           <Route path="/game" element={<Game />} />
           <Route path="/game-result" element={<GameResult />} />
+          <Route path="/game-collection" element={<GameCollection />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />

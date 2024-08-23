@@ -4,7 +4,7 @@ const API_URL = 'https://2bzksr2k-8000.asse.devtunnels.ms/api/user/';
 // 로그인 API 호출
 export const loginApi = async (email, password) => {
   try {
-    const response = await axiosInstance.post(`${API_URL}login/`,{ email, password });
+    const response = await axios.post(`${API_URL}login/`,{ email, password });
     return response.data;
   } catch (error) {
     throw new Error(error.response.data.message);
