@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
+import { useLocation } from "react-router-dom";
 
 const Team = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   const [teamName, setTeamName] = useState("");
   const [univName, setUnivName] = useState("");
   const [teamLeader, setTeamLeader] = useState({

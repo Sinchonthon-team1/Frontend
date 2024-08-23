@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import MainButton from "../../components/MainButton";
 import univs from "../../assets/images//Main/univs.svg";
+import { useNavigate } from "react-router-dom";
+
 const AllUnivCard = () => {
+  const nav = useNavigate();
+
   return (
     <AllUnivCardWrapper>
       <AllUnivSquare>
@@ -10,8 +14,8 @@ const AllUnivCard = () => {
           <br />
           확인해 보세요
         </Title>
-        <MoreBtn>더보기</MoreBtn>
-        <MakeTeamBtn>
+        <MoreBtn onClick={() => nav("/univ")}>더보기</MoreBtn>
+        <MakeTeamBtn onClick={() => nav("/team")}>
           <MainButton>팀 생성하기</MainButton>
         </MakeTeamBtn>
         <Puzzle>
