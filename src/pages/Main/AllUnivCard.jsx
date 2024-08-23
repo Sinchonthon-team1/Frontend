@@ -60,7 +60,7 @@ const AllUnivCircle = styled.div`
 const Title = styled.p`
   ${(props) => props.theme.fontStyles.headline3};
   margin-top: 32px;
-  margin-left: 20px;
+  margin-left: 32px;
 `;
 
 const MakeTeamBtn = styled.div`

@@ -12,7 +12,7 @@ const Performance = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   return (
     <PerformanceWrapper>
       <Navbar />
@@ -50,7 +50,7 @@ const PerformanceContainer = styled.div`
 
 const TopInfo = styled.div`
   height: 72px;
-  margin-top: 126px;
+  margin-top: 30px;
   margin-left: 83px;
 `;
 
