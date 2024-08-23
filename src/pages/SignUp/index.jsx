@@ -16,7 +16,7 @@ const SignUp = () => {
         school: '',
         email: '',
         password: '',
-        user_name: '',
+        game_name: '',
         tag_line: '',
         tier: '',
         position: '',
@@ -50,7 +50,7 @@ const SignUp = () => {
             formData.name,
             formData.age,
             formData.school,
-            formData.user_name,
+            formData.game_name,
             formData.tag_line,
             formData.tier,
             formData.position,
@@ -95,19 +95,6 @@ const SignUp = () => {
                                             className="age"
                                             />
                                         </div>
-                                        {/* <div>
-                                            <span>대학교</span>
-                                            <input
-                                            id="school"
-                                            type="text"
-                                            placeholder="대학교"
-                                            value={formData.school}
-                                            onChange={handleInputChange}
-                                            required
-                                            className="univ"
-                                            />
-
-                                        </div> */}
                                     </InputSpan>
                                 </label>
                                 <label htmlFor="">
@@ -153,39 +140,51 @@ const SignUp = () => {
                                     }}>
 
                                         <input
-                                        id="nickname"
+                                        id="game_name"
                                         type="text"
-                                        placeholder="게임 닉네임을 입력하세요. (ex. lionlike#sinchon24)"
-                                        value={`${formData.user_name}${formData.tag_line ? `#${formData.tag_line}` : ''}`}
-                                        onChange={handleNicknameChange}
+                                        placeholder="게임 닉네임을 입력하세요. (ex. lionlike)"
+                                        value={formData.game_name}
+                                        onChange={handleInputChange}
                                         required
-                                        style={{
-                                            'width': '362px',
-                                        }}
+                                        
                                         />
-                                        <button>확인</button>
                                     </div>
                                     <span className="warning">
                                         <img src={Warning} alt="warning"></img>
                                         다른 사람의 계정을 사용하는 것이 확인되면 계정이 정지될 수 있어요
                                         </span>
                                 </label>
+                                <InputSpan>
+                                        <div>
+                                            <span>티어</span>
+                                            <input
+                                            id="tier"
+                                            type="text"
+                                            placeholder="(ex. 플래티넘1)"
+                                            value={formData.tier}
+                                            onChange={handleInputChange}
+                                            required
+                                            />
+                                        </div>
+                                        <div>
+                                            <span>포지션</span>
+                                            <input
+                                            id="position"
+                                            type="text"
+                                            placeholder="(ex. TOP)"
+                                            value={formData.position}
+                                            onChange={handleInputChange}
+                                            required
+                                            />
+                                        </div>
+                                    </InputSpan>
                                 <label htmlFor="">
-                                    <span>티어</span>
+                                    <span>닉네임 태그라인</span>
                                     <input
-                                    id="tier"
+                                    id="tag_line"
                                     type="text"
-                                    placeholder="롤 티어를 입력해주세요. (ex. 플래티넘1)"
-                                    value={formData.tier}
-                                    onChange={handleInputChange}
-                                    required
-                                    />
-                                    <span>포지션</span>
-                                    <input
-                                    id="position"
-                                    type="text"
-                                    placeholder="포지션을 입력해주세요. (ex. TOP)"
-                                    value={formData.position}
+                                    placeholder="태그라인을 입력해주세요. (ex. #KR1)"
+                                    value={formData.tag_line}
                                     onChange={handleInputChange}
                                     required
                                     />
@@ -347,6 +346,9 @@ const InputSpan = styled.div`
         input {
             width: 100%; 
             padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid ${(props) => props.theme.colors.gray60};
+            background-color: ${(props) => props.theme.colors.gray5};
             
         }
     }
