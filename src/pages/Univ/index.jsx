@@ -11,8 +11,16 @@ import 연세 from "../../assets/images/Univ/Yonsei.svg";
 import 한양 from "../../assets/images/Univ/Hanyang.svg";
 import SortDropdown from "../Univ/Dropdown";
 import { Search } from "lucide-react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Univ = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <Navbar />

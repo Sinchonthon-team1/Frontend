@@ -14,7 +14,7 @@ const AllUnivCard = () => {
           <br />
           확인해 보세요
         </Title>
-        <MoreBtn>더보기</MoreBtn>
+        <MoreBtn onClick={() => nav("/univ")}>더보기</MoreBtn>
         <MakeTeamBtn onClick={() => nav("/team")}>
           <MainButton>팀 생성하기</MainButton>
         </MakeTeamBtn>
