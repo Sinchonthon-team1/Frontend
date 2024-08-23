@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Btn = styled.button`
+    cursor: pointer;
     ${(props) => props.theme.fontStyles.body2Bold};
     color: ${(props) => props.theme.colors.main};
     border: 1px solid var(--Main, #FF108C);
