@@ -16,7 +16,7 @@ const theme = {
     main: "#ff108c",
     blue: "#0b70fe",
     sky: "#66e2f1",
-    pink: "#bbf96c",
+    pink: "#ffb2da",
     orange: "#ff9f00",
     yellow: "#ffd817",
   },
