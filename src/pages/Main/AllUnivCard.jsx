@@ -51,7 +51,6 @@ const AllUnivCircle = styled.div`
   height: 124px;
   border-radius: 50%;
   background-color: #ffe7bf;
-  cursor: pointer;
 `;
 
 const Title = styled.p`

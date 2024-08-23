@@ -8,7 +8,10 @@ const GameCard = () => {
         <GameCircle2 />
         <GameCircle3 />
         <GameContents>
-          <Today>Today</Today>
+          <Top>
+            <Today>Today</Today>
+            <MoreBtn>더보기</MoreBtn>
+          </Top>
           <Section>
             <TodayDate>08/23</TodayDate>
             <UnivList>
@@ -46,6 +49,15 @@ const GameCard = () => {
 
 export default GameCard;
 
+const Top = styled.div`
+  display: flex;
+  width: 336px;
+  height: 54px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+`;
+
 const GameContents = styled.div`
   margin: 126px 24px 0;
   display: flex;
@@ -55,9 +67,22 @@ const GameContents = styled.div`
 const Today = styled.p`
   ${(props) => props.theme.fontStyles.headline2};
   color: ${(props) => props.theme.colors.main};
-  margin-bottom: 24px;
 `;
-
+const MoreBtn = styled.div`
+  width: 80px;
+  height: 31px;
+  ${(props) => props.theme.fontStyles.body2Bold};
+  color: ${(props) => props.theme.colors.main};
+  box-shadow: 0 0 0 1px ${(props) => props.theme.colors.main} inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 28px;
+  &:hover {
+    background: rgba(255, 16, 140, 0.25);
+  }
+`;
 const Section = styled.div`
   display: flex;
   width: 336px;

@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import UnivCard from "./../Main/UnivCard.jsx";
 import GameCard from "./../Main/GameCard.jsx";
 import AllUnivCard from "./../Main/AllUnivCard.jsx";
+import AboutCard from "./../Main/AboutCard.jsx";
 
 const Main = () => {
   return (
@@ -10,7 +11,10 @@ const Main = () => {
       <Navbar />
       <Banner />
       <Board>
-        <UnivCard />
+        <LeftCards>
+          <UnivCard />
+          <AboutCard />
+        </LeftCards>
         <GameCard />
         <AllUnivCard />
       </Board>
@@ -19,6 +23,13 @@ const Main = () => {
 };
 
 export default Main;
+
+const LeftCards = styled.div`
+  width: 446px;
+  height: 619px;
+  display: flex;
+  flex-direction: column;
+`;
 
 const MainWrapper = styled.div`
   width: 100%;
