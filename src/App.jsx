@@ -7,7 +7,6 @@ import Performance from "./pages/Performance";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Univ from "./pages/Univ";
 
 function App() {
   return (
@@ -20,6 +19,8 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/gameregister" element={<GameRegister />} />
           <Route path="/game" element={<Game />} />
+          <Route path="/game-result" element={<GameResult />} />
+
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFoundPage />} />

@@ -170,7 +170,7 @@ const S_Btn = styled.button`
       background: rgba(255, 16, 140, 0.25);
     }
 `;
-const Game = () => {
+const GameResult = () => {
   const games = [
     {'univ1': '연세대학교',
     'univ2': '고려대학교',
@@ -255,6 +255,7 @@ const Game = () => {
     
   ]
   const navigate = useNavigate();
+
   const pathname = window.location.pathname;
   const [active, setActive] = useState(pathname);
   const [currentPage, setCurrentPage] = useState(1);
@@ -271,12 +272,11 @@ const Game = () => {
   const handleReady = () => {
     alert('준비중입니다.');
   };
-  
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
   useEffect(() => {
     setActive(pathname); // Update active state based on current pathname
-  }, [pathname]);
+  }, []);
   return (
     <>
       <Navbar/>
@@ -381,4 +381,4 @@ const Pagination = ({ totalPages, currentPage, paginate }) => {
 };
 
 
-export default Game;
+export default GameResult;
