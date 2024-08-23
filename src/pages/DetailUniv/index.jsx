@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import 홍익 from "../../assets/images/Univ/Hongik.svg";
+
 const DetailUniv = () => {
   return (
     <DetailUnivWrapper>

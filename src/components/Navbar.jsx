@@ -32,6 +32,7 @@ const NavHeader = styled.nav`
   }
   .good {
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -45,6 +46,7 @@ const NavHeader = styled.nav`
     align-items: center;
     width: 40px;
     height: 40px;
+    cursor: pointer;
   }
   span {
     ${(props) => props.theme.fontStyles.body2Bold};
@@ -55,7 +57,7 @@ const Btn = styled.button`
   cursor: pointer;
   ${(props) => props.theme.fontStyles.body2Bold};
   color: ${(props) => props.theme.colors.main};
-  border: 1px solid var(--Main, #FF108C);
+  border: 1px solid var(--Main, #ff108c);
   display: flex;
   width: 105px;
   padding: 5px 10px;
@@ -76,11 +78,16 @@ const Navbar = () => {
   return (
     <NavHeader>
       <div>
-        <img src={Logo} alt="Cubee Logo" className="logo" onClick={()=>navigate("/")} />
+        <img
+          src={Logo}
+          alt="Cubee Logo"
+          className="logo"
+          onClick={() => navigate("/")}
+        />
       </div>
       <div>
-        <div style={{'gap': '4px'}}>
-          <img src={Good} alt="Good" className="good"/>
+        <div style={{ gap: "4px" }}>
+          <img src={Good} alt="Good" className="good" />
           <span>Feedback</span>
         </div>
         <img src={Profile} alt="Profile" className="profile" />

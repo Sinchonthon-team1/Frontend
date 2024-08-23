@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import Logo from "../../assets/images/text-logo.webp";
 import { useState } from "react";
+import { loginApi } from "../../api/auth";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
     display: flex;
@@ -112,6 +114,7 @@ const SignUpFooter = styled.div`
 `;
 
 const Login = () => {
+    const nav = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -123,7 +126,16 @@ const Login = () => {
             [id]: value,
         }));
     };
-    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log(formData);
+        const response = await loginApi(
+            formData.email,
+            formData.password,
+        );
+        alert('로그인 성공');
+        nav('/');
+    }
     return (
         <>
         <Navbar/>
@@ -160,7 +172,7 @@ const Login = () => {
                                 />
                             </label>
                         </Area>
-                        <Button>완료</Button>
+                        <Button onClick={handleSubmit}>완료</Button>
                     </InputContainer>
                     <SignUpFooter>
                         <span>아직 회원이 아니신가요?</span>

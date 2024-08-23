@@ -9,7 +9,7 @@ const Team = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   const [teamName, setTeamName] = useState("");
   const [univName, setUnivName] = useState("");
   const [teamLeader, setTeamLeader] = useState({
@@ -218,9 +218,9 @@ const StyledContainer = styled.div`
     align-self: center;
     cursor: pointer;
     background-color: ${(props) =>
-      props.disabled ? "#ccc" : props.theme.colors.primary};
+      props.disabled ? "#ccc" : props.theme.colors.main};
 
-    color: ${(props) => (props.disabled ? "#666" : "#BFC2C8")};
+    color: ${(props) => (props.disabled ? "#666" : "white")};
   }
 `;
 const NameWrapper = styled.div`
@@ -243,7 +243,7 @@ const NameWrapper = styled.div`
 const Title = styled.div`
   ${(props) => props.theme.fontStyles.headline1};
   color: ${(props) => props.theme.colors.main};
-  margin-bottom: 30px;
+  margin-bottom: -30px;
   margin-left: 180px;
 `;
 const Subtitle = styled.div`
@@ -274,10 +274,14 @@ const TeamName = styled.div`
   position: relative; /* 상대 위치 설정 */
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
   }
 
   .teamnameType {
@@ -296,6 +300,7 @@ const TeamName = styled.div`
     border-radius: 8px;
     border: 1px solid #ccc;
     background: #fafafb;
+    color: ${(props) => props.theme.colors.gray60};
   }
 `;
 
@@ -305,10 +310,14 @@ const UnivName = styled.div`
   margin-bottom: 20px;
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
   }
 
   .univnameType {
@@ -375,10 +384,14 @@ const InfoContainer = styled.div`
   align-items: center;
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
   }
   .nickname {
     width: 264px;
