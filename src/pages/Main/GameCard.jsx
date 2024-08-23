@@ -82,7 +82,9 @@ const MoreBtn = styled.div`
   &:hover {
     background: rgba(255, 16, 140, 0.25);
   }
+  cursor: pointer;
 `;
+
 const Section = styled.div`
   display: flex;
   width: 336px;
