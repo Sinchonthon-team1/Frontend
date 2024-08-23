@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import HomeCalendar from "../../components/Calendar/Calendar";
+import { useLocation } from "react-router-dom";
 
 const GameRegister = () => {
   const [teamName, setTeamName] = useState("");
@@ -12,6 +13,12 @@ const GameRegister = () => {
   const isFormValid = () => {
     return teamName && teamScore && univName && chatLink;
   };
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
@@ -177,6 +184,10 @@ const TeamName = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
 
   .teamnameType {
     width: 432px;
@@ -207,7 +218,10 @@ const UnivName = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
   .teamnameType {
     width: 432px;
     height: 52px;
@@ -222,7 +236,10 @@ const TeamScore = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
   .teamnameType {
     width: 432px;
     height: 52px;
@@ -237,7 +254,10 @@ const Chat = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
   .teamnameType {
     width: 432px;
     height: 52px;
