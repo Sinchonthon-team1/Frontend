@@ -9,6 +9,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import GameResult from "./pages/GameResult";
+import DetailUniv from "./pages/DetailUniv";
 import GameCollection from "./pages/GameCollection";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <Route path="/game" element={<Game />} />
           <Route path="/game-result" element={<GameResult />} />
           <Route path="/game-collection" element={<GameCollection />} />
-
+          <Route path="/detail-univ" element={<DetailUniv />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFoundPage />} />
