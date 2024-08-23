@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Univ from "./pages/Univ";
+import Team from "./pages/Team";
+import GameRegister from "./pages/GameRegister";
 import Main from "./pages/Main";
 import Game from "./pages/Game";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -12,11 +13,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/univ" element={<Univ />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/gameregister" element={<GameRegister />} />
           <Route path="/game" element={<Game />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFoundPage />} />
+
         </Routes>
       </BrowserRouter>
     </div>

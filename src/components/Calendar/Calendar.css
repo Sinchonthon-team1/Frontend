@@ -1,0 +1,175 @@
+.CalendarContainer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px; /* footer와의 간격 확보 */
+}
+.CalendarWrapper {
+  position: relative;
+}
+.react-calendar {
+  width: 411px;
+  height: 360px;
+  font-family: Pretendard;
+  font-size: 20px;
+  border-radius: 14px;
+  box-shadow: 0px 4px 15.4px 0px rgba(0, 0, 0, 0.08);
+  border: 1px #ffd817;
+  border-style: solid;
+}
+.react-calendar__navigation__label {
+  background-color: transparent !important; /* 배경색 제거 */
+  color: black;
+}
+.react-calendar__navigation {
+  position: relative;
+}
+.react-calendar__month-view__weekdays abbr {
+  text-decoration: none;
+  font-weight: 800;
+  color: #3c3c43;
+  opacity: 0.4;
+}
+.react-calendar__tile {
+  color: black;
+  position: relative;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: black;
+}
+.react-calendar__tile--active {
+  background-color: #eeecec;
+  color: #ff108c;
+}
+.react-calendar__tile--hasActive {
+  background-color: #eeecec;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background-color: #eeecec;
+}
+.react-calendar__tile--now {
+  background-color: white;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #eeecec;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #9a9a9a;
+}
+.react-calendar__navigation__label > span {
+  font-family: Pretendard;
+  font-size: 17px;
+}
+.react-calendar__navigation__arrow {
+  margin: 0 5px; /* 화살표 간격을 조정 */
+}
+.react-calendar__navigation {
+  display: flex;
+  justify-content: center;
+}
+.react-calendar__navigation__label {
+  flex-grow: 0 !important; /* flex-grow 속성을 0으로 설정 */
+}
+.SelectedDateWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px; /* 모서리 둥글게 설정 */
+}
+
+.DateSection,
+.TimeSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.DateElement,
+.TimeElement {
+  display: flex;
+  flex-direction: column;
+}
+
+.SelectedDateLabel {
+  font-size: 12px;
+  color: #6b7276; /* 회색 글씨 */
+  margin-left: 5px;
+}
+
+.SelectedDateBox {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: #bfc2c8;
+  font-family: Pretendard, sans-serif;
+}
+
+.DateBox {
+  font-family: Pretendard, sans-serif;
+  color: #bfc2c8; /* 숫자 색상 */
+  font-size: 25px;
+  border-radius: 5px;
+  line-height: 56px;
+  text-align: center;
+  width: 32px;
+  height: 56px;
+  border: 1px solid #6b7276;
+  background-color: #fafafb;
+  margin-left: 2px;
+  margin-top: 5px;
+}
+
+.SelectedDate {
+  font-family: Pretendard, sans-serif;
+  color: #b0b0b0; /* 날짜 숫자 색상을 회색으로 설정 */
+  font-size: 25px;
+  border: 1px solid #6b7276;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 50px;
+  text-align: center;
+}
+
+.TimeInput {
+  font-family: Pretendard, sans-serif;
+  font-size: 25px !important;
+  color: #b0b0b0; /* 입력 필드의 글자 색상 */
+  border: 1px solid #6b7276 !important;
+  border-radius: 5px;
+  width: 70px;
+  height: 56px;
+  text-align: center;
+  margin: 5px;
+  background-color: #fafafb;
+}
+.TimeSection .dash {
+  font-size: 25px;
+  font-family: Pretendard, sans-serif;
+  color: #b0b0b0;
+}
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #17d6b5;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 3px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.today {
+  font-size: 10px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
