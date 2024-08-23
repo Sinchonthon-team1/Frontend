@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 const Univ = () => {
   return <div>Univ페이지입니다.</div>;
 };
