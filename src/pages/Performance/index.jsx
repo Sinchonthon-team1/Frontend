@@ -50,7 +50,7 @@ const PerformanceContainer = styled.div`
 
 const TopInfo = styled.div`
   height: 72px;
-  margin-top: 30px;
+  margin-top: 94px;
   margin-left: 83px;
 `;
 

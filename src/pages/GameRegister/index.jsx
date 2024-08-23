@@ -110,7 +110,7 @@ export default GameRegister;
 const StyledContainer = styled.div`
   width: 1500px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 94px;
   display: flex;
   flex-direction: column;
   justify-content: center;

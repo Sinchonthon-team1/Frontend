@@ -61,6 +61,7 @@ const MainWrapper = styled.div`
 `;
 
 const Banner = styled.div`
+  margin-top: 64px;
   width: 100%;
   height: auto;
   background-color: ${(props) => props.theme.colors.main};
