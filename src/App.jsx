@@ -6,7 +6,6 @@ import Game from "./pages/game";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import GameRegister from "./pages/GameRegister";
 
 function App() {
   return (
@@ -20,8 +19,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </div>
