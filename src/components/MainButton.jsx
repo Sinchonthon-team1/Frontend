@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const MainButton = () => {
+const MainButton = (handleButton, children) => {
   return (
     <div>
-      <Button>팀 생성하기</Button>
+      <Button onClick={handleButton}>{children}</Button>
     </div>
   );
 };
@@ -11,6 +11,7 @@ const MainButton = () => {
 export default MainButton;
 
 const Button = styled.div`
+  cursor: pointer;
   border-radius: 20px;
   background-color: ${(props) => props.theme.colors.pink};
   display: flex;
