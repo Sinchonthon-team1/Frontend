@@ -1,35 +1,58 @@
 import styled from "styled-components";
+import Navbar from "../../components/Navbar";
 
 const Main = () => {
   return (
     <div>
-      Main페이지입니다.
-      <MainFont>헤드라인 / main</MainFont>
-      <SubFont>서브 / blue</SubFont>
-      <BodyFont>바디 / sky</BodyFont>
-      <CaptionFont>캡션 / yellow</CaptionFont>
+      <Navbar />
+      <Banner />
+      <RegisterBtn>
+        <Circle />
+        <Square>경기 등록하기</Square>
+      </RegisterBtn>
     </div>
   );
 };
 
 export default Main;
 
-const MainFont = styled.div`
-  ${(props) => props.theme.fontStyles.headline1};
-  color: ${(props) => props.theme.colors.main};
+const Banner = styled.div`
+  width: 100%;
+  height: 350px;
+  background-color: ${(props) => props.theme.colors.gray20};
 `;
 
-const SubFont = styled.div`
+const Circle = styled.div`
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background-color: ${(props) => props.theme.colors.pink};
+  cursor: pointer;
+`;
+
+const Square = styled.div`
+  position: absolute;
+  bottom: 0px;
+  width: 384px;
+  height: 86px;
+  background-color: ${(props) => props.theme.colors.pink};
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   ${(props) => props.theme.fontStyles.subHead1};
-  color: ${(props) => props.theme.colors.blue};
 `;
 
-const BodyFont = styled.div`
-  ${(props) => props.theme.fontStyles.body1Bold};
-  color: ${(props) => props.theme.colors.sky};
-`;
-
-const CaptionFont = styled.div`
-  ${(props) => props.theme.fontStyles.captionBold};
-  color: ${(props) => props.theme.colors.yellow};
+const RegisterBtn = styled.div`
+  position: relative;
+  width: 384px;
+  height: 148px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:hover ${Circle}, &:hover ${Square} {
+    background-color: ${(props) => props.theme.colors.main};
+  }
 `;
