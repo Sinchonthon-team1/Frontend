@@ -4,12 +4,18 @@ import UnivCard from "./../Main/UnivCard.jsx";
 import GameCard from "./../Main/GameCard.jsx";
 import AllUnivCard from "./../Main/AllUnivCard.jsx";
 import AboutCard from "./../Main/AboutCard.jsx";
+import bannerAnimation from "./../../assets/images/Main/sinchonton_Lottieplugin.json";
+import Lottie from "react-lottie";
 
 const Main = () => {
   return (
     <MainWrapper>
       <Navbar />
-      <Banner />
+      <Banner>
+        <LottieWrapper>
+          <Lottie options={defaultOptions} />
+        </LottieWrapper>
+      </Banner>
       <Board>
         <LeftCards>
           <UnivCard />
@@ -23,6 +29,20 @@ const Main = () => {
 };
 
 export default Main;
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: bannerAnimation,
+  rendererSettings: {
+    preserveAspectRatio: "none",
+  },
+};
+
+const LottieWrapper = styled.div`
+  width: 100%;
+  margin-bottom: -3.5px;
+`;
 
 const LeftCards = styled.div`
   width: 446px;
@@ -42,8 +62,8 @@ const MainWrapper = styled.div`
 
 const Banner = styled.div`
   width: 100%;
-  height: 350px;
-  background-color: ${(props) => props.theme.colors.gray20};
+  height: auto;
+  background-color: ${(props) => props.theme.colors.main};
 `;
 
 const Board = styled.div`

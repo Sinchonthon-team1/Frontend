@@ -173,13 +173,14 @@ const Nickname = styled.div`
   width: 264px;
   height: 52px;
   border-radius: 8px;
-  background-color: ${(props) => props.theme.colors.gray5};
-  box-shadow: 0 0 0 1px ${(props) => props.theme.colors.gray60} inset;
+  background-color: ${(props) => props.theme.colors.white};
+  /* box-shadow: 0 0 0 1px ${(props) => props.theme.colors.gray60} inset; */
   display: flex;
   align-items: center;
   span {
-    margin-left: 20px;
-    ${(props) => props.theme.fontStyles.sub3Med};
+    /* margin-left: 20px; */
+    margin: 0 auto;
+    ${(props) => props.theme.fontStyles.subHead3Med};
     color: ${(props) => props.theme.colors.gray70};
   }
 `;
@@ -188,13 +189,14 @@ const Tier = styled.div`
   height: 52px;
   margin-left: 12px;
   border-radius: 8px;
-  background-color: ${(props) => props.theme.colors.gray5};
-  box-shadow: 0 0 0 1px ${(props) => props.theme.colors.gray60} inset;
+  background-color: ${(props) => props.theme.colors.white};
+  /* box-shadow: 0 0 0 1px ${(props) => props.theme.colors.gray60} inset; */
   display: flex;
   align-items: center;
   span {
-    margin-left: 20px;
-    ${(props) => props.theme.fontStyles.sub3Med};
+    /* margin-left: 20px; */
+    margin: 0 auto;
+    ${(props) => props.theme.fontStyles.subHead3Med};
     color: ${(props) => props.theme.colors.gray70};
   }
 `;
@@ -203,13 +205,14 @@ const Position = styled.div`
   height: 52px;
   margin-left: 12px;
   border-radius: 8px;
-  background-color: ${(props) => props.theme.colors.gray5};
-  box-shadow: 0 0 0 1px ${(props) => props.theme.colors.gray60} inset;
+  background-color: ${(props) => props.theme.colors.white};
+  /* box-shadow: 0 0 0 1px ${(props) => props.theme.colors.gray60} inset; */
   display: flex;
   align-items: center;
   span {
-    margin-left: 20px;
-    ${(props) => props.theme.fontStyles.sub3Med};
+    /* margin-left: 20px; */
+    margin: 0 auto;
+    ${(props) => props.theme.fontStyles.subHead3Med};
     color: ${(props) => props.theme.colors.gray70};
   }
 `;

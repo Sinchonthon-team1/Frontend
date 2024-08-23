@@ -3,8 +3,16 @@ import Navbar from "../../components/Navbar";
 import UnivPFCard from "./UnivPFCard";
 import OurTeamPFCard from "./OurTeamPFCard";
 import OurTeamInfoCard from "./OurTeamInfoCard";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Performance = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   return (
     <PerformanceWrapper>
       <Navbar />

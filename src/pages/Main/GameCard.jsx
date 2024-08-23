@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const GameCard = () => {
+  const nav = useNavigate();
+
   return (
     <GameCardWrapper>
       <GameSquare>
@@ -41,7 +44,9 @@ const GameCard = () => {
       </GameSquare>
       <RegisterBtn>
         <RegisterCircle />
-        <RegisterSquare>경기 등록하기</RegisterSquare>
+        <RegisterSquare onClick={() => nav("/gameRegister")}>
+          경기 등록하기
+        </RegisterSquare>
       </RegisterBtn>
     </GameCardWrapper>
   );
