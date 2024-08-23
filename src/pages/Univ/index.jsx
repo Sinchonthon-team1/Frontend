@@ -108,6 +108,8 @@ const SearchContainer = styled.div`
 `;
 
 const Univs = styled.div`
+  width: 866px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
