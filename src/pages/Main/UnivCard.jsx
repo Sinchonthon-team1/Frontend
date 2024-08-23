@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import MainButton from "../../components/MainButton";
+import { useNavigate } from "react-router-dom";
 
 const UnivCard = () => {
+  const nav = useNavigate();
   return (
     <UnivCardWrapper>
       <UnivCircle />
@@ -16,7 +18,9 @@ const UnivCard = () => {
         <Rank>
           멋사대학교에서<span className="rankNum">5</span>위
         </Rank>
-        <MainButton>더보기</MainButton>
+        <div onClick={() => nav("/performance")}>
+          <MainButton>더보기</MainButton>
+        </div>
       </UnivSquare>
     </UnivCardWrapper>
   );
