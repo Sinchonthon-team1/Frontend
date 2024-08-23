@@ -177,6 +177,10 @@ const TeamName = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
 
   .teamnameType {
     width: 432px;
@@ -207,7 +211,10 @@ const UnivName = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
   .teamnameType {
     width: 432px;
     height: 52px;
@@ -222,7 +229,10 @@ const TeamScore = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
   .teamnameType {
     width: 432px;
     height: 52px;
@@ -237,7 +247,10 @@ const Chat = styled.div`
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
+  }
   .teamnameType {
     width: 432px;
     height: 52px;
