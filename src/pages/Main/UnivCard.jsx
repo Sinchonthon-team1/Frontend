@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import MainButton from "../../components/MainButton";
 
 const UnivCard = () => {
   return (
     <UnivCardWrapper>
       <UnivCircle />
-      <UnivSquare>멋사대학교</UnivSquare>
+      <UnivSquare>
+        <UnivName>멋사대학교</UnivName>
+        <UnivScore>171 / 200</UnivScore>
+        <MainButton>더보기</MainButton>
+      </UnivSquare>
     </UnivCardWrapper>
   );
 };
@@ -28,9 +33,10 @@ const UnivSquare = styled.div`
   background-color: #c2dbff;
   border-radius: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   ${(props) => props.theme.fontStyles.subHead1};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const UnivCardWrapper = styled.div`
@@ -41,4 +47,17 @@ const UnivCardWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+const UnivName = styled.div`
+  ${(props) => props.theme.fontStyles.headline2};
+  color: ${(props) => props.theme.colors.black};
+  margin-top: 36px;
+`;
+
+const UnivScore = styled.div`
+  ${(props) => props.theme.fontStyles.headline1};
+  color: ${(props) => props.theme.colors.blue};
+  margin-top: 66px;
+  margin-bottom: 72px;
 `;
