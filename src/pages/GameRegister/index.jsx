@@ -90,6 +90,7 @@ const GameRegister = () => {
           type="submit"
           value="완료"
           disabled={!isFormValid()}
+          style={{ marginTop: "64px", marginBottom: "169px" }}
         />
       </StyledContainer>
     </>
