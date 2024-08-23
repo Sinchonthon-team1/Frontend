@@ -19,9 +19,9 @@ const Btn = styled.button`
 
 
 
-const Button = ({ children, handleButton }) => {
+const Button = ({ children}) => {
 
-    return <Btn onClick={handleButton}>{children}</Btn>;
+    return <Btn>{children}</Btn>;
     
 };
 

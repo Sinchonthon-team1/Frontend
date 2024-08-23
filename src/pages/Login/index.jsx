@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import Logo from "../../assets/images/text-logo.webp";
+import { useState } from "react";
 
 const Wrapper = styled.div`
     display: flex;
@@ -163,7 +164,7 @@ const Login = () => {
                     </InputContainer>
                     <SignUpFooter>
                         <span>아직 회원이 아니신가요?</span>
-                        <a href="#">회원가입하기</a>
+                        <a href="/signup">회원가입하기</a>
                     </SignUpFooter>
                 </LoginForm>
             </Container>
