@@ -124,9 +124,9 @@ const StyledContainer = styled.div`
     align-self: center;
     cursor: pointer;
     background-color: ${(props) =>
-      props.disabled ? "#ccc" : props.theme.colors.primary};
+      props.disabled ? "#ccc" : props.theme.colors.main};
 
-    color: ${(props) => (props.disabled ? "#666" : "#BFC2C8")};
+    color: ${(props) => (props.disabled ? "#666" : "white")};
   }
 `;
 const NameWrapper = styled.div`
@@ -249,7 +249,7 @@ const TeamScore = styled.div`
 `;
 const Chat = styled.div`
   input {
-    padding:20px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;

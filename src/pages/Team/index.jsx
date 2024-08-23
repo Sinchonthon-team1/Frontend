@@ -218,9 +218,9 @@ const StyledContainer = styled.div`
     align-self: center;
     cursor: pointer;
     background-color: ${(props) =>
-      props.disabled ? "#ccc" : props.theme.colors.primary};
+      props.disabled ? "#ccc" : props.theme.colors.main};
 
-    color: ${(props) => (props.disabled ? "#666" : "#BFC2C8")};
+    color: ${(props) => (props.disabled ? "#666" : "white")};
   }
 `;
 const NameWrapper = styled.div`
