@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Team from "./pages/Team";
+import Univ from "./pages/Univ";
 import GameRegister from "./pages/GameRegister";
 import Main from "./pages/Main";
 import Game from "./pages/Game";
@@ -14,9 +15,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/univ" element={<Univ />} />
           <Route path="/performance" element={<Performance />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/univ" element={<Univ />} />
           <Route path="/gameregister" element={<GameRegister />} />
           <Route path="/game" element={<Game />} />
           <Route path="/login" element={<Login />} />
