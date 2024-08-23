@@ -142,7 +142,7 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 const Title = styled.p`
-  margin-top: 126px;
+  margin-top: 96px;
   ${(props) => props.theme.fontStyles.headline1};
   color: ${(props) => props.theme.colors.main};
 `;

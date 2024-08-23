@@ -12,7 +12,7 @@ import 한양 from "../../assets/images/Univ/Hanyang.svg";
 import SortDropdown from "../Univ/Dropdown";
 import { Search } from "lucide-react";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Univ = () => {
   const { pathname } = useLocation();
@@ -20,7 +20,7 @@ const Univ = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
+  const nav = useNavigate();
   return (
     <>
       <Navbar />
@@ -36,7 +36,7 @@ const Univ = () => {
             <img src={고려} alt="고려" />
             <div>고려대학교</div>
           </div>
-          <div className="university">
+          <div className="university" onClick={() => nav("/detail-univ")}>
             <img src={홍익} alt="홍익" />
             <div>홍익대학교</div>
           </div>
@@ -80,7 +80,7 @@ export default Univ;
 const StyledContainer = styled.div`
   width: 1500px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 94px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,6 +127,7 @@ const Univs = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+    cursor: pointer;
     ${(props) => props.theme.fontStyles.subHead1};
   }
 `;

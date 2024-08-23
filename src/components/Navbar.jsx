@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 const NavHeader = styled.nav`
   z-index: 100;
+  position: fixed;
+  top: 0;
   background-color: ${(props) => props.theme.colors.white};
   ${(props) => props.theme.fontStyles.headline1};
   color: ${(props) => props.theme.colors.main};
