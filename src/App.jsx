@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Univ from "./pages/Univ";
 import GameResult from "./pages/GameResult";
+import DetailUniv from "./pages/DetailUniv";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="/gameregister" element={<GameRegister />} />
           <Route path="/game" element={<Game />} />
           <Route path="/game-result" element={<GameResult />} />
-
+          <Route path="/detail-univ" element={<DetailUniv />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFoundPage />} />

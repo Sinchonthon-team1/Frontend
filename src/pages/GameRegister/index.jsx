@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar";
 import HomeCalendar from "../../components/Calendar/Calendar";
+import { useLocation } from "react-router-dom";
 
 const GameRegister = () => {
   const [teamName, setTeamName] = useState("");
@@ -12,6 +13,12 @@ const GameRegister = () => {
   const isFormValid = () => {
     return teamName && teamScore && univName && chatLink;
   };
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
