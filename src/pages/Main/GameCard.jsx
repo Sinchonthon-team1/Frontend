@@ -13,7 +13,7 @@ const GameCard = () => {
         <GameContents>
           <Top>
             <Today>Today</Today>
-            <MoreBtn>더보기</MoreBtn>
+            <MoreBtn onClick={()=>nav("/game-collection")}>더보기</MoreBtn>
           </Top>
           <Section>
             <TodayDate>08/23</TodayDate>
