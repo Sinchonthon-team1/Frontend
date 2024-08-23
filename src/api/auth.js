@@ -1,6 +1,6 @@
 import axios from 'axios';
 // 인증 관련 API 호출을 담당하는 모듈입니다.
-const API_URL = 'https://qq1lmx06-8000.asse.devtunnels.ms/api/user/';
+const API_URL = 'https://2bzksr2k-8000.asse.devtunnels.ms/api/user/';
 // 로그인 API 호출
 export const loginApi = async (email, password) => {
   try {
@@ -18,8 +18,9 @@ export const registerApi = async (
   name,
   age,
   school,
-  game_name,
+  user_name,
   tag_line,
+  nickname,
 ) => {
   try {
     const response = await axios.post(
@@ -30,8 +31,10 @@ export const registerApi = async (
         name,
         age,
         school,
-        game_name,
+        user_name,
         tag_line,
+        nickname,
+
       }
     );
     return response.data;
