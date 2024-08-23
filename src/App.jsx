@@ -7,6 +7,8 @@ import Performance from "./pages/Performance";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Univ from "./pages/Univ";
+import GameResult from "./pages/GameResult";
 
 function App() {
   return (
