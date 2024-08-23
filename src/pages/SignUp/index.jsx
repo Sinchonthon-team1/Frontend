@@ -110,6 +110,22 @@ const Area = styled.div`
                 border: 1px solid ${(props) => props.theme.colors.main};
             }
         }
+        button {
+            display: flex;
+            width: 60px;
+            height: 52px;
+            padding: 12px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            border: 1px solid ${(props) => props.theme.colors.gray60};
+            background-color: ${(props) => props.theme.colors.white};
+            color: ${(props) => props.theme.colors.gray70};
+            cursor: pointer;
+            &:hover {
+                background-color: ${(props) => props.theme.colors.gray10};
+            }
+        }
     }
 `;
 const InputSpan = styled.div`
@@ -127,7 +143,7 @@ const InputSpan = styled.div`
         span {
             display: flex;
             ${(props) => props.theme.fontStyles.subHead2};
-            color: ${(props) => props.theme.colors.blac};
+            color: ${(props) => props.theme.colors.black};
             width: 72px;
             justify-content: flex-start;
         }
@@ -170,7 +186,7 @@ const SignUp = () => {
         school: '',
         email: '',
         password: '',
-        game_name: '',
+        user_name: '',
         tag_line: '',
     });
 
@@ -184,6 +200,15 @@ const SignUp = () => {
     const handleNext = () => {
         setIsGameInfo(true);
     }
+    const handleNicknameChange = (e) => {
+        const nickname = e.target.value;
+        const [user_name, tag_line = ''] = nickname.split('#');
+        setFormData({
+            ...formData,
+            user_name: user_name.trim(),
+            tag_line: tag_line.trim(),
+        });
+    };
     const handleSubmit = async () => {
         // Send API request with formData
         setIsGameInfo(false);
@@ -193,8 +218,8 @@ const SignUp = () => {
             formData.name,
             formData.age,
             formData.school,
-            // formData.game_name,
-            // formData.tag_line,
+            formData.user_name,
+            formData.tag_line,
         );
         alert("회원가입이 완료되었습니다.");
         navigate('/login');
@@ -287,29 +312,50 @@ const SignUp = () => {
                             <Area>
                                 <label htmlFor="">
                                     <span>게임 닉네임</span>
-                                    <input
-                                    id="game_name"
-                                    type="text"
-                                    placeholder="게임 닉네임을 입력하세요"
-                                    value={formData.game_name}
-                                    onChange={handleInputChange}
-                                    required
-                                    />
+                                    <div style={{
+                                        display: 'flex',
+                                        gap: '10px',
+                                        alignItems: 'center',
+                                    }}>
+
+                                        <input
+                                        id="nickname"
+                                        type="text"
+                                        placeholder="게임 닉네임을 입력하세요. (ex. lionlike#sinchon24)"
+                                        value={`${formData.user_name}${formData.tag_line ? `#${formData.tag_line}` : ''}`}
+                                        onChange={handleNicknameChange}
+                                        required
+                                        style={{
+                                            'width': '362px',
+                                        }}
+                                        />
+                                        <button>확인</button>
+                                    </div>
                                     <span className="warning">
                                         <img src={Warning} alt="warning"></img>
                                         다른 사람의 계정을 사용하는 것이 확인되면 계정이 정지될 수 있어요
                                         </span>
                                 </label>
                                 <label htmlFor="">
-                                    <span>닉네임 태그라인</span>
+                                    <span>티어</span>
                                     <input
                                     id="tag_line"
                                     type="text"
-                                    placeholder="태그라인을 입력해주세요(ex. #KR1)"
+                                    placeholder="롤 티어를 입력해주세요. (ex. 플래티넘1)"
                                     value={formData.tag_line}
                                     onChange={handleInputChange}
                                     required
                                     />
+                                    <span>포지션</span>
+                                    <input
+                                    id="tag_line"
+                                    type="text"
+                                    placeholder="포지션을 입력해주세요. (ex. Top)"
+                                    value={formData.tag_line}
+                                    onChange={handleInputChange}
+                                    required
+                                    />
+                                    
                                 </label>
                             </Area>
                             <Button onClick={handleSubmit}>완료</Button>

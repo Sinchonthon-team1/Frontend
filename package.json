@@ -9,9 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "proxy": 
-    "https://qq1lmx06-8000.asse.devtunnels.ms/"
-  ,
+  "proxy": "https://qq1lmx06-8000.asse.devtunnels.ms/",
   "dependencies": {
     "axios": "^1.7.4",
     "lucide-react": "^0.435.0",
@@ -20,6 +18,7 @@
     "react-calendar": "^5.0.0",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",
+    "react-lottie": "^1.2.4",
     "react-router-dom": "^6.26.1",
     "style-components": "^0.1.0",
     "styled-components": "^6.1.12",
