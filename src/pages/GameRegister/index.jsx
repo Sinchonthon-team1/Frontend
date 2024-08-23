@@ -179,7 +179,7 @@ const TeamName = styled.div`
   margin-bottom: 20px;
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -213,7 +213,7 @@ const UnivName = styled.div`
   margin-top: 20px;
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -231,7 +231,7 @@ const UnivName = styled.div`
 `;
 const TeamScore = styled.div`
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -249,7 +249,7 @@ const TeamScore = styled.div`
 `;
 const Chat = styled.div`
   input {
-    padding: 8px;
+    padding:20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;

@@ -274,10 +274,14 @@ const TeamName = styled.div`
   position: relative; /* 상대 위치 설정 */
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
   }
 
   .teamnameType {
@@ -305,10 +309,14 @@ const UnivName = styled.div`
   margin-bottom: 20px;
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
   }
 
   .univnameType {
@@ -375,10 +383,14 @@ const InfoContainer = styled.div`
   align-items: center;
 
   input {
-    padding: 8px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  ::placeholder {
+    ${(props) => props.theme.fontStyles.subHead3Med};
+    color: ${(props) => props.theme.colors.gray30};
   }
   .nickname {
     width: 264px;
