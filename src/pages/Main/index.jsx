@@ -1,13 +1,10 @@
 import styled from "styled-components";
+import Navbar from "../../components/Navbar";
 
 const Main = () => {
   return (
     <div>
-      Main페이지입니다.
-      <MainFont>헤드라인 / main</MainFont>
-      <SubFont>서브 / blue</SubFont>
-      <BodyFont>바디 / sky</BodyFont>
-      <CaptionFont>캡션 / yellow</CaptionFont>
+        <Navbar/>
     </div>
   );
 };
