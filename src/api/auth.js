@@ -20,7 +20,8 @@ export const registerApi = async (
   school,
   user_name,
   tag_line,
-  nickname,
+  tier,
+  position,
 ) => {
   try {
     const response = await axios.post(
@@ -33,7 +34,8 @@ export const registerApi = async (
         school,
         user_name,
         tag_line,
-        nickname,
+        tier,
+        position,
 
       }
     );
