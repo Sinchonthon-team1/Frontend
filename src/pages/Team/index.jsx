@@ -9,7 +9,7 @@ const Team = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   const [teamName, setTeamName] = useState("");
   const [univName, setUnivName] = useState("");
   const [teamLeader, setTeamLeader] = useState({
@@ -243,7 +243,7 @@ const NameWrapper = styled.div`
 const Title = styled.div`
   ${(props) => props.theme.fontStyles.headline1};
   color: ${(props) => props.theme.colors.main};
-  margin-bottom: 30px;
+  margin-bottom: -30px;
   margin-left: 180px;
 `;
 const Subtitle = styled.div`
