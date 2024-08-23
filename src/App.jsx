@@ -8,11 +8,7 @@ import Performance from "./pages/Performance";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-<<<<<<< HEAD
-=======
-import Univ from "./pages/Univ";
 import GameResult from "./pages/GameResult";
->>>>>>> 932c677c4e54c514cce5c2e14e08a234df0df414
 
 function App() {
   return (
